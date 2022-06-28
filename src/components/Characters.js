@@ -2,10 +2,10 @@ import React from 'react'
 
 export const Characters = ({characters = []}) => {
   return (
-    <div className="grid-rows-4">
+    <div className="grid grid-rows-6 grid-flow-col gap-4">
         {characters.map((item,index)=>(
-            <div key={index} className="grid-cols-4 gap">
-                <div className="flex justify-center">
+            <div key={index} >
+                <div className="flex justify-center my-2">
                     <div className="rounded-lg shadow-lg bg-white max-w-sm">
                         <img className="rounded-t-lg" src={item.image} alt=""/>
                             <div className="p-6">
