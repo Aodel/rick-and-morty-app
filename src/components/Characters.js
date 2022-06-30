@@ -2,24 +2,28 @@ import React from 'react'
 
 export const Characters = ({characters = []}) => {
   return (
-    <div className="grid grid-rows-6 grid-flow-col gap-4">
+    <div className="gridrick grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-36 ">
         {characters.map((item,index)=>(
-            <div key={index} >
-                <div className="flex justify-center my-2">
-                    <div className="rounded-lg shadow-lg bg-white max-w-sm">
-                        <img className="rounded-t-lg" src={item.image} alt=""/>
-                            <div className="p-6">
-                                <h5 className="text-gray-900 text-xl font-medium mb-2">{item.name}</h5>
-                                <p className="text-gray-700 text-base mb-3">                                   
-                                   Species: {item.species}
-                                </p>
-                                <p className="text-gray-700 text-base mb-3">                                   
-                                   Gender: {item.gender}
-                                </p>
-                                <p className="text-gray-700 text-base mb-3">                                   
-                                   Status: {item.status}
-                                </p>
-                                <button type="button" className=" inline-block px-6 py-2.5 border-2 border-black bg-lime-400  text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-pink-200 hover:shadow-lg focus:bg-gray-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-600 active:shadow-lg transition duration-150 ease-in-out">Button</button>    
+            <div key={index} className="">
+                <div className="flex justify-center">
+                    <div className="rounded-lg shadow-lg bg-white max-w-sm md:m-3">
+                        <img className="rounded-t-lg w-full" src={item.image} alt=""/>
+                            <div className="icard w-80 p-6" style={{minwWidth: "200rem"}} >
+                                <div className="card-body bg-gray-100">
+                                    <h5 className="text-gray-900 text-xl font-medium mb-3">{item.name}</h5>
+                                    <p className="text-gray-700 text-base mb-2">                                   
+                                    Species: {item.species}
+                                    </p>
+                                    <p className="text-gray-700 text-base mb-2">                                   
+                                    Gender: {item.gender}
+                                    </p>
+                                    <p className="text-gray-700 text-base mb-2">                                   
+                                    Status: {item.status}
+                                    </p>
+                                    <p className="text-gray-700 text-base mb-2">                                   
+                                    Location: {item.location.name}
+                                    </p>
+                                </div>
                             </div>
                     </div>
                 </div>
