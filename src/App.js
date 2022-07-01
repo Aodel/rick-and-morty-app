@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import { Characters } from './components/Characters';
+import { Footer } from './components/Footer';
 import Navbar from './components/Navbar';
 import { Pagination } from './components/Pagination';
 
@@ -54,6 +55,7 @@ function App() {
         onPrevious={onPrevious}
         onNext={onNext}
       />
+      <Footer />
     </div>
     </>
 
