@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import { Characters } from './components/Characters';
 import Navbar from './components/Navbar';
-import { Pagination } from './components/Pagination';
-
 
 
 // Ejecuta 2 veces la llamada a la API - REVISAR !!!!
@@ -38,20 +36,23 @@ function App() {
     fecthChars(info.next);
   }
 
+
   return (
-    <><Navbar brand="Rick and Morty App" />
-    <div className="content-center bg-zinc-700">
-      <Pagination 
-        prev={info.prev} 
+    <><Navbar brand="Rick and Morty App" /><div className="content-center bg-zinc-700">
+      <Pagination
+        prev={info.prev}
         next={info.next}
-      />
+        onPrevious={onPrevious}
+        onNext={onNext} />
       <Characters characters={characters} />
-      <Pagination 
-        prev={info.prev} 
+      <Pagination
+        prev={info.prev}
         next={info.next}
-      />
-    </div>
-    </>
+        onPrevious={onPrevious}
+        onNext={onNext} />
+
+    </div></>
+   
 
   );
 }
