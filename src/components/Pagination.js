@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const Pagination = (prev, next, onPrevious, onNext) => {
+export const Pagination = ({prev, next, onPrevious, onNext}) => {
 
     const handlePrevious = () => {
         onPrevious();

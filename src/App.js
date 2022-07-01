@@ -44,11 +44,15 @@ function App() {
       <Pagination 
         prev={info.prev} 
         next={info.next}
+        onPrevious={onPrevious}
+        onNext={onNext}
       />
       <Characters characters={characters} />
       <Pagination 
         prev={info.prev} 
         next={info.next}
+        onPrevious={onPrevious}
+        onNext={onNext}
       />
     </div>
     </>
